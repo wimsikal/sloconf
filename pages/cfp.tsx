@@ -31,11 +31,48 @@ export default function ExpoPage() {
     <Page meta={meta}>
       <Layout>
         <Header hero="Call for Papers" description={meta.description} />
-        <p>How to submit your proposal:</p>
-        <ol>
-          <li>Provide a detailed and focused description with a max of 900 characters. This is what will be used on the online schedule if your talk is accepted.</li>
-          <li>Provide a biography for all speakers, including previous speaking experience.</li>
-        </ol>
+        <p>SLOConf - The Service Level Objective Conference for Site Reliability Engineers is opening the Call for Papers (CFP) to share your ideas for consideration. The CFP opens March 8, 2021 and closes on March 26, 2021.</p>
+        <p>The world wants to share and learn about SLOs. Building on the success of the Beyond Seattle SRE Meetup, we are preparing a virtual event on May 17-20 that will educate and connect engineers, practitioners, and interested parties to learn and share.</p>
+
+        <p>Format:
+<ul>
+            <li>Call for presentations: 5-10 minute pre-recorded videos, curated by program committee</li>
+            <li>Slack discussion area (hosted by Beyond Seattle SRE Meetup)</li>
+            <li>Minimal synchronous communication (maybe an optional kickoff/close zoom, live Q&A Panel)</li>
+            <li>Maximally inclusive, attend-while-you-work, focused on learning all about Service Level Objectives (and closely related concepts: error budgets, service level indicators [SLIs], Slogicians).</li>
+            <li>Strict no sales pitch policy</li>
+          </ul>
+        </p>
+        <p>There will be 4 tracks at SLOConf:
+<ol>
+            <li>New To SLOs - learn the basics & how to get started</li>
+            <li>SLOcializing - big picture, business value of SLOs, convince your boss that SLOs rock</li>
+            <li>Technical and Deep Dive - visualizations, expressions, architectural strategy, doing it "at scale"</li>
+            <li>Beyond Theory - case studies, what it takes to build SLOs platform, failures</li>
+          </ol>
+        </p>
+
+        <p>Note: SLOConf is not a replacement for also important related big topics like observability or incident response, DevOps, or even SRE. This event is focused on SLOs.</p>
+
+        <p>How to submit your proposal:
+<ol>
+            <li>Provide a biography and contact for all speakers.</li>
+            <li>Provide a title for your talk.</li>
+            <li>Provide a detailed and focused description with a max of 900 characters. This is what will be used on the online schedule if your talk is accepted.</li>
+          </ol>
+        </p>
+
+        <p>Important Dates:
+<ul>
+            <li>Open CFP: March 8</li>
+            <li>CFP Submission Deadline: March 26</li>
+            <li>CFP Approval Date: April 2</li>
+            <li>Final Videos: May 3</li>
+            <li>Event Dates: May 17-20</li>
+          </ul>
+        </p>
+        <p>By participating in SLOConf, you agree to the SLOConf - <a href='/code-of-conduct'>Code of Conduct</a></p>
+        <p>Thank you for taking the time to share your wisdom with the SRE community. Good luck, and we certainly hope to see you as a speaker at SLOConf 2021.</p>
       </Layout>
     </Page>
   );
