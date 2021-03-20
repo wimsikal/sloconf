@@ -18,6 +18,7 @@
 import Page from '@components/page';
 import Header from '@components/header';
 import Layout from '@components/layout';
+import styles from './labs.module.css';
 
 import { META_DESCRIPTION } from '@lib/constants';
 
@@ -31,14 +32,14 @@ export default function ExpoPage() {
     <Page meta={meta}>
       <Layout>
         <Header hero="Hands-on Labs" description={meta.description} />
-        <h2>Some Lab Ideas/Topics (Crowdsourced)</h2>
-        <ul>
-          <li>SLO-driven continuous delivery with Keptn (@grabnerandi)</li>
-          <li>SLO-driven auto-remediation with Keptn (@grabnerandi / @jetzlstorfer)</li>
-          <li>SLO-driven resilience engineering with Keptn (@jetzlstorfer)</li>
-        </ul>
-        <p>General input: google codelabs gives a great experience for delivering labs/hands-on exercises. We are using this currently for our tutorials in our project.</p>
-        <p>Lab Planning Meeting: Thursday, March 11, 2021 9:00 AM - 10:00 am (PT) { } <a href='https://nobl9.zoom.us/j/99692135092?pwd=UUpsaENOVmllcEQ0cnBWdi9PVHJCZz09'>Zoom Details</a></p>
+        <div className={styles.text}>
+        <p>SLOConf will also bring you hands-on labs built to learn more about SLOs</p>
+        <p>These labs will focused on SLOs, SLIs and error-budgets built for Site Reliability Engineers.</p>
+        <h2>Do you want to help?</h2>
+        <p>If you would like to help build or sponsor a lab. Please contact <a href="mailto:danny@nobl9.com">danny@nobl9.com</a></p>
+        <p>SLOConf is looking for volunteers to help staff the "Office Hours" to help support the labs.</p>
+        <h3>Stay tuned for more information</h3>
+        </div>
       </Layout>
     </Page>
   );
