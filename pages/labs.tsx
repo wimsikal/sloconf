@@ -33,12 +33,11 @@ export default function ExpoPage() {
       <Layout>
         <Header hero="Hands-on Labs" description={meta.description} />
         <div className={styles.text}>
-        <p>SLOConf will also bring you hands-on labs built to learn more about SLOs</p>
-        <p>These labs will focused on SLOs, SLIs and error-budgets built for Site Reliability Engineers.</p>
+        <p>Join us in the SLOConf Labs, a hands-on and interactive virtual experience where you can work on your SLO skills. </p>
+        <p>Explore differant labs, each focusing on a topic that relates to Service Level Objects and delivering reliable systems. Topics include Service Level Objectives, Service Level Indicators, Error Budgets, and the tools to support them.</p><p>Details for the labs are coming soon.</p>
         <h2>Do you want to help?</h2>
         <p>If you would like to help build or sponsor a lab. Please contact <a href="mailto:danny@nobl9.com">danny@nobl9.com</a></p>
         <p>SLOConf is looking for volunteers to help staff the "Office Hours" to help support the labs.</p>
-        <h3>Stay tuned for more information</h3>
         </div>
       </Layout>
     </Page>

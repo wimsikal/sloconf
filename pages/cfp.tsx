@@ -34,6 +34,7 @@ export default function ExpoPage() {
         <Header hero="Call for Papers" description={meta.description} />
         <div  className={styles.text}>
         <p>SLOConf - The Service Level Objective Conference for Site Reliability Engineers is opening the Call for Papers (CFP) to share your ideas for consideration. The CFP opens March 8, 2021 and closes on March 26, 2021.</p>
+        <p>You can submit CFPs <a href='https://forms.gle/Rx4rknSEspTAuxcTA'>here</a>.</p>
         <p>The world wants to share and learn about SLOs. Building on the success of the Beyond Seattle SRE Meetup, we are preparing a virtual event on May 17-20 that will educate and connect engineers, practitioners, and interested parties to learn and share.</p>
 
         <p>Format:
@@ -61,6 +62,7 @@ export default function ExpoPage() {
             <li>Provide a biography and contact for all speakers.</li>
             <li>Provide a title for your talk.</li>
             <li>Provide a detailed and focused description with a max of 900 characters. This is what will be used on the online schedule if your talk is accepted.</li>
+            <li>You can submit CFPs <a href='https://forms.gle/Rx4rknSEspTAuxcTA'>here</a>.</li>
           </ol>
         </p>
 
