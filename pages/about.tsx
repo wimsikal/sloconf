@@ -53,8 +53,8 @@ export default function ExpoPage() {
             <li>Networking opportunities with job postings from companies hiring now</li>
           </ul>
           </p>
-          <p>Follow @SLOConf on <a href='https://twitter.com/sloconf' target="_blank">Twitter</a></p>
-          <p>In the meantime, you can watch the Beyond Seattle SRE Meetups <a href="https://vimeo.com/showcase/8271600" target="_blank">here</a></p>
+          <p>Get the latest update by following @SLOConf on <a href="https://twitter.com/sloconf" target="_blank">Twitter</a>.</p>
+          <p>In the meantime, you can watch the Beyond Seattle SRE Meetups <a href="https://vimeo.com/showcase/8271600" target="_blank">here</a>.</p>
         </div>
       </Layout>
     </Page >
