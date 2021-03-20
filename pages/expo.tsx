@@ -20,6 +20,7 @@ import Page from '@components/page';
 import SponsorsGrid from '@components/sponsors-grid';
 import Header from '@components/header';
 import Layout from '@components/layout';
+import styles from './expo.module.css';
 
 import { getAllSponsors } from '@lib/cms-api';
 import { Sponsor } from '@lib/types';
@@ -39,8 +40,10 @@ export default function ExpoPage({ sponsors }: Props) {
     <Page meta={meta}>
       <Layout>
         <Header hero="Expo" description='{meta.description}' />
+        <div className={styles.text}>
         <p>SLOConf it brought to you by our sponsors.</p>
         <p>If you are intrested in becoming a sponsor, please contact <a href='mailto:sharton@nobl9.com'>sharon@nobl9.com</a></p>
+        </div>
         <SponsorsGrid sponsors={sponsors} />
       </Layout>
     </Page>
