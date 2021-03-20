@@ -37,7 +37,7 @@ export default function ExpoPage() {
           <p>The SRE community needs a place to gather and focus on SLOs in depth. This virtual conference will cover topics at all levels, from introduction to SLOs to the practical application of SLOs.  This conference is a community event made and led by Site Reliability Engineers and influencers who care about reliability and becoming more customer centric by adopting, measuring and optimizing SLOs.</p>
           <h2>How it started</h2>
           <p>Inspired by a <a href='https://twitter.com/KitMerker/status/1359874708800294912' target="_blank">twitter conversation</a> on the elevation of customer experience and happiness between engineers and product managers, the SLOConf, the Service Level Objective Conference for Site Reliability Engineers is a community-led event. The opportunity to share, educate, and learn about SLOs, builds on the success of the <a href='https://www.meetup.com/Beyond-Seattle-SRE/' target="_blank">Beyond Seattle SRE Meetup</a>.</p>
-          <h2>Talks</h2>
+          <h2>Tracks</h2>
           <p>This event will have four tracks focused on everything you want to learn about SLOs. <br /><a href="/tracks">Learn more</a></p>
           <h2>Labs</h2>
           <p>SLOConf will also bring you hands-on labs built to learn more about SLOs.<br /> <a href='/labs'>Learn more</a></p>
@@ -53,7 +53,8 @@ export default function ExpoPage() {
             <li>Networking opportunities with job postings from companies hiring now</li>
           </ul>
           </p>
-          <p>Follow @SLOConf on <a href='https://twitter.com/sloconf' target="_blank">Twitter</a>.</p>
+          <p>Get the latest update by following @SLOConf on <a href="https://twitter.com/sloconf" target="_blank">Twitter</a>.</p>
+          <p>In the meantime, you can watch the Beyond Seattle SRE Meetups <a href="https://vimeo.com/showcase/8271600" target="_blank">here</a>.</p>
         </div>
       </Layout>
     </Page >
