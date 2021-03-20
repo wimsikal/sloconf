@@ -18,6 +18,7 @@
 import Page from '@components/page';
 import Header from '@components/header';
 import Layout from '@components/layout';
+import styles from './cfp.module.css';
 
 import { META_DESCRIPTION } from '@lib/constants';
 
@@ -31,6 +32,7 @@ export default function ExpoPage() {
     <Page meta={meta}>
       <Layout>
         <Header hero="Call for Papers" description={meta.description} />
+        <div  className={styles.text}>
         <p>SLOConf - The Service Level Objective Conference for Site Reliability Engineers is opening the Call for Papers (CFP) to share your ideas for consideration. The CFP opens March 8, 2021 and closes on March 26, 2021.</p>
         <p>The world wants to share and learn about SLOs. Building on the success of the Beyond Seattle SRE Meetup, we are preparing a virtual event on May 17-20 that will educate and connect engineers, practitioners, and interested parties to learn and share.</p>
 
@@ -73,6 +75,7 @@ export default function ExpoPage() {
         </p>
         <p>By participating in SLOConf, you agree to the SLOConf - <a href='/code-of-conduct'>Code of Conduct</a></p>
         <p>Thank you for taking the time to share your wisdom with the SRE community. Good luck, and we certainly hope to see you as a speaker at SLOConf 2021.</p>
+        </div>
       </Layout>
     </Page>
   );
