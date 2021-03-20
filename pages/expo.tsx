@@ -31,14 +31,14 @@ type Props = {
 
 export default function ExpoPage({ sponsors }: Props) {
   const meta = {
-    title: 'Expo - Virtual Event Starter Kit',
+    title: 'Expo - SLOConf',
     description: META_DESCRIPTION
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Expo" description={meta.description} />
+        <Header hero="Expo" description='SLOConf is brought to you by our sponsors. If you are intrested in sponsoring SLO Conf please contact <a href="mailto:sharon@nobl9.com">sharon@nobl9.com</a>' />
         <SponsorsGrid sponsors={sponsors} />
       </Layout>
     </Page>
