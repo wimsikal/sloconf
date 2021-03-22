@@ -20,7 +20,7 @@ import Page from '@components/page';
 import SponsorsGrid from '@components/sponsors-grid';
 import Header from '@components/header';
 import Layout from '@components/layout';
-import styles from './expo.module.css';
+import styles from './sponsors.module.css';
 
 import { getAllSponsors } from '@lib/cms-api';
 import { Sponsor } from '@lib/types';
