@@ -24,7 +24,7 @@ import { META_DESCRIPTION } from '@lib/constants';
 export default function Conf() {
   const { query } = useRouter();
   const meta = {
-    title: 'SLOConf - Service Level Objective Confernece',
+    title: 'SLOConf - Service Level Objective Conference',
     description: META_DESCRIPTION
   };
   const ticketNumber = query.ticketNumber?.toString();
