@@ -79,7 +79,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                Sign up for Swag
+                Thank you.
               </>
             )}
           </h2>
@@ -98,10 +98,8 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
         </div>
         <div className={cn(styleUtils.appear, styleUtils['appear-third'])}>
           {!sharePage ? (
-            <TicketForm
-              defaultUsername={username}
-              setTicketGenerationState={setTicketGenerationState}
-            />
+            <>
+            </>
           ) : (
             <Form sharePage />
           )}
@@ -130,9 +128,15 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
                   <TicketCopy username={username} />
                 </div>
               </div>
+              
             ) : (
               <div className={styles['ticket-actions-placeholder']} />
             )}
+            <h2>Personalize your ticket and share it.</h2>
+            <TicketForm
+              defaultUsername={username}
+              setTicketGenerationState={setTicketGenerationState}
+            />
           </>
         )}
       </div>
