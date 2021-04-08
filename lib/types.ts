@@ -100,11 +100,3 @@ export type GitHubOAuthData =
       name: string;
       login: string;
     };
-export type HubspotForm =
-  {
-    portalId: string;
-    formId: string;
-    onSubmit: string;
-    onReady: string;
-    loading: string;
-  }
