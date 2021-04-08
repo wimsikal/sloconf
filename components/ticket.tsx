@@ -79,7 +79,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                Sign up for <br /> SLOConf Swag.
+                Sign up for Swag
               </>
             )}
           </h2>
@@ -91,8 +91,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
             ) : (
               <>
                 <Swag />
-                Generate a unique ticket image with <br className={styleUtils['hide-on-mobile']} />
-                your GitHub profile.
+                
               </>
             )}
           </p>

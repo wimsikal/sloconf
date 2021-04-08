@@ -20,15 +20,19 @@ import Header from '@components/header';
 import Layout from '@components/layout';
 import HubspotForm from 'react-hubspot-form';
 
-//  import styles from './swag.module.css';
 
 import { META_DESCRIPTION } from '@lib/constants';
 
 export default function Swag() {
-        return (
-        <Page meta={meta}>
-            <Layout>
-                <Header hero="Swag" description={meta.description} />
+    const meta = {
+        title: 'Swag - SLOConf',
+        description: META_DESCRIPTION
+    };
+
+    return (
+        // <Page meta={meta}>
+            <>
+                {/* <Header hero="Swag" description={meta.description} /> */}
                 <div >
                     <HubspotForm
                         portalId='7186369'
@@ -38,8 +42,8 @@ export default function Swag() {
                         loading={<div>Loading...</div>}
                     />
                 </div>
-            </Layout>
-        </Page>
+            </>
+        // </Page>
     );
 }
 
