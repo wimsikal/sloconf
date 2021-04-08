@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:SLOConf
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20210517
+DTEND;VALUE=DATE:20210521
+DTSTAMP:20210408T170555Z
+UID:4hj2p5ppkj2k0t7uub1h8ijob6@google.com
+CREATED:20210408T170526Z
+DESCRIPTION:<b><a href="https://sloconf.com" target="_blank">https://slocon
+ f.com</a></b><br><br><b>Join on Slack</b><br><a href="https://join.slack.co
+ m/t/beyond-seattle-sre/shared_invite/zt-nyezbvvb-5S_T37wkvEJ98b~Nt~cgIg" ta
+ rget="_blank">https://join.slack.com/t/beyond-seattle-sre/shared_invite/zt-
+ nyezbvvb-5S_T37wkvEJ98b~Nt~cgIg</a><br>(The slack link above will expire on
+  April 22\, please visit <a href="http://SLOConf.com" target="_blank">http:
+ //SLOConf.com</a> for the latest) <br><p>As a community-led SLOConf\, atten
+ dees can participate throughout their day based on what they want to learn 
+ and engage on. Expect minimal synchronous communication. Also\, we take lea
+ rning seriously\, so there is a strict no sales pitch policy.</p><p>By part
+ icipating in SLOConf\, you agree to the SLOConf - <a href="http://localhost
+ :3000/code-of-conduct" target="_blank">Code of Conduct</a></p><p><strong>Jo
+ in in the SLOConf with:</strong></p><ul><li>Laser focus on learning about S
+ ervice Level Objectives and closely related concepts - error budgets\, serv
+ ice level indicators (SLIs)\, Slogicians</li><li>Live Slack discussion host
+ ed by Beyond Seattle SRE Meetup</li><li>On demand pre-recorded videos curat
+ ed by the program committee from the community</li><li>Live 15 minute hands
+ -on labs</li><li>Networking opportunities with job postings from companies 
+ hiring now</li></ul><p></p><p>Get the latest update by following @SLOConf o
+ n <a href="https://twitter.com/sloconf" target="_blank">Twitter</a>.</p><p>
+ In the meantime\, you can watch the Beyond Seattle SRE Meetups <a href="htt
+ ps://vimeo.com/showcase/8271600" target="_blank">here</a>.</p>
+LAST-MODIFIED:20210408T170526Z
+LOCATION:https://sloconf.com
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:SLOConf - Virtual Conference
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
