@@ -29,6 +29,7 @@ import TicketActions from './ticket-actions';
 import TicketCopy from './ticket-copy';
 import { DATE, SITE_NAME } from '@lib/constants';
 import Form from './form';
+import Swag from '../components/swag';
 
 type Props = {
   username: UserData['username'];
@@ -78,7 +79,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                You're in. <br /> Make it unique.
+                Sign up for <br /> SLOConf Swag.
               </>
             )}
           </h2>
@@ -89,6 +90,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               </>
             ) : (
               <>
+                <Swag />
                 Generate a unique ticket image with <br className={styleUtils['hide-on-mobile']} />
                 your GitHub profile.
               </>

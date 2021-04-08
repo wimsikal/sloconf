@@ -20,21 +20,16 @@ import Header from '@components/header';
 import Layout from '@components/layout';
 import HubspotForm from 'react-hubspot-form';
 
- import styles from './swag.module.css';
+//  import styles from './swag.module.css';
 
 import { META_DESCRIPTION } from '@lib/constants';
 
-export default function ExpoPage() {
-    const meta = {
-        title: 'Swag - SLOConf',
-        description: META_DESCRIPTION
-    };
-
-    return (
+export default function Swag() {
+        return (
         <Page meta={meta}>
             <Layout>
                 <Header hero="Swag" description={meta.description} />
-                <div className={styles.text}>
+                <div >
                     <HubspotForm
                         portalId='7186369'
                         formId='079ceea4-e174-433d-b400-90f4ad313f54'
