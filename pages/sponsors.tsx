@@ -36,7 +36,7 @@ export default function ExpoPage() {
           <p>We are excited that you are interested in sponsoring the upcoming community-led event SLOConf, The Service Level Objective Conference for Site Reliability Engineers.</p>
           <p>Site Reliability Engineering is one of the hottest areas as companies look to build reliable systems and their online presence. As companies rush to adopt Site Reliability Engineering principles, SLOs are the most important place to begin. SLOs are the combination of cultural philosophies, practices, and tools.</p>
           <p>The SRE community needs a place to gather and focus on SLOs in depth. This virtual conference will cover topics at all levels, from introduction to SLOs to the practical application of SLOs.  This conference is a community event made and led by Site Reliability Engineers and influencers who care about reliability and becoming more customer centric by adopting, measuring and optimizing SLOs.</p>
-          <table>
+          {/* <table>
             <tr>
               <th>THE GOODS</th>
               <th>SLO BURN<br />$2,500</th>
@@ -107,7 +107,7 @@ export default function ExpoPage() {
               <td>X</td>
               <td>X</td>
             </tr>
-          </table>
+          </table> */}
           <p><strong>Join SLOCONF Sponsors!</strong><br />
           <strong>Contact <a href='mailto:sharon@nobl9.com'>sharon@nobl9.com</a></strong></p>
         </div>
