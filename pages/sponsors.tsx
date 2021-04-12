@@ -109,7 +109,7 @@ export default function ExpoPage() {
             </tr>
           </table> */}
           <p><strong>Join SLOCONF Sponsors!</strong><br />
-          <strong>Contact <a href='mailto:sharon@nobl9.com'>sharon@nobl9.com</a></strong></p>
+          <strong>Contact <a href='mailto:mike@nobl9.com'>sharon@nobl9.com</a></strong></p>
         </div>
       </Layout>
     </Page>
