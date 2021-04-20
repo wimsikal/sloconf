@@ -67,7 +67,8 @@ function CompanyJobs({ jobs }: Props) {
 export default function JobsGrid({ jobs }: Props) {
   const companies = jobs.reduce((allCompanies: any, job) => {
     allCompanies[job.companyName] = [...(allCompanies[job.companyName] || []), job];
-    return allCompanies;
+    
+    return allCompanies
   }, {});
 
   return (
@@ -75,7 +76,7 @@ export default function JobsGrid({ jobs }: Props) {
       {Object.keys(companies).map((companyName: string) => (
         <div key={companyName} className={styles.companyRow}>
           <div className={styles.rowHeader}>
-            <h2 className={styles.companyName}>{companyName}</h2>
+            <a href="#${ companyName }"><h2 className={styles.companyName}>{companyName}</h2></a>
             {/* <a
               href={companies[companyName][0].discord}
               target="_blank"
