@@ -1,7 +1,7 @@
 {
-  "name": "Virtual Event Starter Kit",
-  "short_name": "Virtual Event Starter Kit",
-  "description": "Virtual Event Starter Kit -> https://demo.vercel.events",
+  "name": "SLOConf",
+  "short_name": "Service Level Objective Conference",
+  "description": "Service Level Objective Conference -> https://sloconf.com",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",
