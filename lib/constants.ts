@@ -60,6 +60,10 @@ export const NAVIGATION = [
     name: 'Sponsors',
     route: '/sponsors'
   },
+  {
+    name: 'Jobs',
+    route: '/jobs'
+  },
   // {
   //   name: 'Stage A',
   //   route: '/stage/a'
@@ -88,10 +92,7 @@ export const NAVIGATION = [
   //   name: 'Expo',
   //   route: '/expo'
   // },
-  // {
-  //   name: 'Jobs',
-  //   route: '/jobs'
-  // },
+  
 ];
 
 export type TicketGenerationState = 'default' | 'loading';
