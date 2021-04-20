@@ -41,16 +41,16 @@ export const REPO = 'https://github.com/wimsikal/sloconf';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
+    name: 'Register',
+    route: '/'
+  },
+  {
     name: 'About',
     route: '/about'
   },
   {
     name: 'Tracks',
     route: '/tracks'
-  },
-  {
-    name: 'Call for Papers',
-    route: '/cfp'
   },
   {
     name: 'Labs',
