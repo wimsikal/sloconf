@@ -91,7 +91,7 @@ export default function SpeakerSection({ speaker }: Props) {
                 <TwitterIcon />
               </span>
             )}
-            {speaker.github ? (
+            {/* {speaker.github ? (
               <a
                 aria-label="GitHub"
                 className={styles.githubIcon}
@@ -105,7 +105,7 @@ export default function SpeakerSection({ speaker }: Props) {
               <span className={cn(styles.githubIcon, styles.disabled)}>
                 <GithubIcon color="#D8D8D8" size={24} />
               </span>
-            )}
+            )} */}
           </div>
         </div>
       </div>
