@@ -53,6 +53,10 @@ export const NAVIGATION = [
     route: '/tracks'
   },
   {
+    name: 'Speakers',
+    route: '/speakers'
+  },
+  {
     name: 'Labs',
     route: '/labs'
   },
@@ -84,10 +88,7 @@ export const NAVIGATION = [
   //   name: 'Schedule',
   //   route: '/schedule'
   // },
-  // {
-  //   name: 'Speakers',
-  //   route: '/speakers'
-  // },
+
   // {
   //   name: 'Expo',
   //   route: '/expo'
