@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+
 import { Job, Sponsor, Stage, Speaker } from '@lib/types';
 
 const API_URL = 'https://graphql.datocms.com/';
@@ -44,7 +46,7 @@ async function fetchCmsAPI(query: string, { variables }: { variables?: Record<st
 export async function getAllSpeakers(): Promise<Speaker[]> {
   const data = await fetchCmsAPI(`
     {
-      allSpeakers(first: 100) {
+      allSpeakers(first: 100, orderBy: name_ASC) {
         name
         bio
         title
