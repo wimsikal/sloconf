@@ -41,9 +41,23 @@ export default function ExpoPage() {
             height={500}
           />
           <h3>Valued at $600</h3>
+          <h2>Win the newest Fitbit: Fitbit Sense!</h2>
+          <Image
+            src="/fitbit.png"
+            alt="Picture of Fibbit Sense"
+            width={500}
+            height={500}
+          />
+          <h3>10 Winners of Alex Hidalgo's SLO Book</h3>
+          <Image
+            src="/slo-book.jpg"
+            alt="Picture of SLO Book"
+            width={500}
+            height={500}
+          />
           <p>
-            10 runners up will win a copy of Alex Hidalgo’s book “Implementing Service Level
-            Objectives” Winners will be chosen at random. Must be 18 and older to participate. US,
+            10 runners up will win a copy of Alex Hidalgo’s book <a href='https://www.alex-hidalgo.com/the-slo-book'>“Implementing Service Level
+            Objectives”</a> Winners will be chosen at random. Must be 18 and older to participate. US,
             EU and UK only. One entry per contestant. More info here (link to page) Register to win
             at sloconf.com! Good luck!
           </p>
