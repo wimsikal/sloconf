@@ -79,7 +79,7 @@ export default function ExpoPage() {
               accounts){' '}
             </li>
             <li>Winner will be chosen randomly by May 20th</li>
-            <li>Winner will receive a brand new drone with camera (valued at $600)</li>
+            <li>Winner will receive a brand new drone with camera or a Fitbit Sense</li>
             <li>
               10 runner ups will receive Alex Hidalgo’s book Implementing Service Level Objectives
             </li>
