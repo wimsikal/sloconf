@@ -1,10 +1,10 @@
 {
   "name": "SLOConf",
   "description": "Service Level Objective Conference.",
-  "previewImage": "https://demo.vercel.events/twitter-card.png",
+  "previewImage": "https://sloconf.com/twitter-card.png",
   "datocmsProjectId": "37685",
   "deploymentType": "vercel",
   "buildCommand": "npm run build",
   "datocmsApiTokenEnvName": "DATOCMS_READ_ONLY_API_TOKEN",
-  "livePreviewUrl": "https://demo.vercel.events/"
+  "livePreviewUrl": "https://sloconf.com/"
 }
