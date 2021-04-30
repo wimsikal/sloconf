@@ -62,21 +62,68 @@ type Props = {
 };
 
 export default function SponsorsGrid({ sponsors }: Props) {
-  const silverSponsors = sponsors.filter(s => s.tier === 'silver');
+  const letssloSponsors = sponsors.filter(s => s.tier === 'letsslo');
+  const slosteadySponsors = sponsors.filter(s => s.tier === 'slosteady');
+  const sloburnSponsors = sponsors.filter(s => s.tier === 'sloburn');
+  const mediaSponsors = sponsors.filter(s => s.tier === 'media');
   const otherSponsors = sponsors.filter(s => s.tier !== 'silver');
 
   return (
     <>
+      <div className={styles.tierRow}>
+        <div className={styles.rowHeader}>
+          <h2 className="letsslo">Let's SLO!</h2>
+        </div>
+      </div>
       <div className={styles.grid}>
+        {letssloSponsors.map(sponsor => (
+          <SponsorCard key={sponsor.name} sponsor={sponsor} />
+        ))}
+      </div>
+
+      <div className={styles.tierRow}>
+        <div className={styles.rowHeader}>
+          <h2 className="slosteady">SLO Steady</h2>
+        </div>
+          </div>
+        <div className={styles.grid}>
+          {slosteadySponsors.map(sponsor => (
+            <SponsorCard key={sponsor.name} sponsor={sponsor} />
+          ))}
+        </div>
+
+      <div className={styles.tierRow}>
+        <div className={styles.rowHeader}>
+          <h2 className="sloburn">SLO Burn</h2>
+        </div>
+      </div>
+      <div className={styles.grid}>
+        {sloburnSponsors.map(sponsor => (
+          <SponsorCard key={sponsor.name} sponsor={sponsor} />
+        ))}
+      </div>
+
+      <div className={styles.tierRow}>
+        <div className={styles.rowHeader}>
+          <h2 className="media">Media Sponsors</h2>
+        </div>
+      </div>
+      <div className={styles.grid}>
+        {mediaSponsors.map(sponsor => (
+          <SponsorCard key={sponsor.name} sponsor={sponsor} />
+        ))}
+      </div>
+
+      {/* <div className={styles.grid}>
         {otherSponsors.map(sponsor => (
           <SponsorCard key={sponsor.name} sponsor={sponsor} />
         ))}
       </div>
       <div className={styles.grid}>
-        {silverSponsors.map(sponsor => (
+        {mediaSponsors.map(sponsor => (
           <SponsorCard key={sponsor.name} sponsor={sponsor} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 }

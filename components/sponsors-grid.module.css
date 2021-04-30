@@ -50,6 +50,20 @@
   }
 }
 
+@media (min-width: 768px) {
+  .tierRow {
+    padding: 0 var(--space-8x);
+  }
+}
+
+.rowHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: intial;
+  /* margin-bottom: var(--space-4x); */
+  flex-direction: column;
+}
+
 .silver {
   border-radius: 6px;
 }
