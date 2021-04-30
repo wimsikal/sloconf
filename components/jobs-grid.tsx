@@ -76,7 +76,7 @@ export default function JobsGrid({ jobs }: Props) {
       {Object.keys(companies).map((companyName: string) => (
         <div key={companyName} className={styles.companyRow}>
           <div className={styles.rowHeader}>
-            <a href="#${ companyName }"><h2 className={styles.companyName}>{companyName}</h2></a>
+            <h2 className={styles.companyName}>{companyName}</h2>
             {/* <a
               href={companies[companyName][0].discord}
               target="_blank"
