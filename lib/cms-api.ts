@@ -15,11 +15,11 @@
  */
 import { Job, Sponsor, Stage, Speaker, Track } from '@lib/types';
 
-// import * as agilityApi from './cms-providers/agility';
+import * as agilityApi from './cms-providers/agility';
 import * as datoCmsApi from './cms-providers/dato';
-// import * as contentfulApi from './cms-providers/contentful';
-// import * as prismicApi from './cms-providers/prismic';
-// import * as storyblokApi from './cms-providers/storyblok';
+import * as contentfulApi from './cms-providers/contentful';
+import * as prismicApi from './cms-providers/prismic';
+import * as storyblokApi from './cms-providers/storyblok';
 
 let cmsApi: {
   getAllSpeakers: () => Promise<Speaker[]>;
@@ -30,8 +30,7 @@ let cmsApi: {
 };
 
 
-
-
+  cmsApi = datoCmsApi;
 
   cmsApi = {
     getAllSpeakers: async () => [],
