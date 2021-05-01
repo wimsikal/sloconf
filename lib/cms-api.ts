@@ -29,21 +29,10 @@ let cmsApi: {
   getAllJobs: () => Promise<Job[]>;
 };
 
-if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
-  cmsApi = datoCmsApi;
-} else if (process.env.CONTENTFUL_ACCESS_TOKEN && process.env.CONTENTFUL_SPACE_ID) {
-  cmsApi = contentfulApi;
-} else if (process.env.STORYBLOK_PREVIEW_TOKEN) {
-  cmsApi = storyblokApi;
-} else if (process.env.PRISMIC_REPO_ID) {
-  cmsApi = prismicApi;
-} else if (
-  process.env.AGILITY_GUID &&
-  process.env.AGILITY_API_FETCH_KEY &&
-  process.env.AGILITY_API_PREVIEW_KEY
-) {
-  cmsApi = agilityApi;
-} else {
+
+
+
+
   cmsApi = {
     getAllSpeakers: async () => [],
     getAllStages: async () => [],
@@ -51,7 +40,7 @@ if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
     getAllTracks: async () => [],
     getAllJobs: async () => []
   };
-}
+
 
 export async function getAllSpeakers(): Promise<Speaker[]> {
   return cmsApi.getAllSpeakers();
