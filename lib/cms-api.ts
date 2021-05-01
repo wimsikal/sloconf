@@ -13,40 +13,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker, Track } from '@lib/types';
 
-import * as agilityApi from './cms-providers/agility';
+// import * as agilityApi from './cms-providers/agility';
 import * as datoCmsApi from './cms-providers/dato';
-import * as contentfulApi from './cms-providers/contentful';
-import * as prismicApi from './cms-providers/prismic';
-import * as storyblokApi from './cms-providers/storyblok';
+// import * as contentfulApi from './cms-providers/contentful';
+// import * as prismicApi from './cms-providers/prismic';
+// import * as storyblokApi from './cms-providers/storyblok';
 
 let cmsApi: {
   getAllSpeakers: () => Promise<Speaker[]>;
   getAllStages: () => Promise<Stage[]>;
   getAllSponsors: () => Promise<Sponsor[]>;
+  getAllTracks: () => Promise<Track[]>;
   getAllJobs: () => Promise<Job[]>;
 };
 
 if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
   cmsApi = datoCmsApi;
 } else if (process.env.CONTENTFUL_ACCESS_TOKEN && process.env.CONTENTFUL_SPACE_ID) {
-  cmsApi = contentfulApi;
+  // cmsApi = contentfulApi;
 } else if (process.env.STORYBLOK_PREVIEW_TOKEN) {
-  cmsApi = storyblokApi;
+  // cmsApi = storyblokApi;
 } else if (process.env.PRISMIC_REPO_ID) {
-  cmsApi = prismicApi;
+  // cmsApi = prismicApi;
 } else if (
   process.env.AGILITY_GUID &&
   process.env.AGILITY_API_FETCH_KEY &&
   process.env.AGILITY_API_PREVIEW_KEY
 ) {
-  cmsApi = agilityApi;
+  // cmsApi = agilityApi;
 } else {
   cmsApi = {
     getAllSpeakers: async () => [],
     getAllStages: async () => [],
     getAllSponsors: async () => [],
+    getAllTracks: async () => [],
     getAllJobs: async () => []
   };
 }
@@ -61,6 +63,10 @@ export async function getAllStages(): Promise<Stage[]> {
 
 export async function getAllSponsors(): Promise<Sponsor[]> {
   return cmsApi.getAllSponsors();
+}
+
+export async function getAllTracks(): Promise<Track[]> {
+  return cmsApi.getAllTracks();
 }
 
 export async function getAllJobs(): Promise<Job[]> {

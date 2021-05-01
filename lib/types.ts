@@ -66,6 +66,14 @@ export type Sponsor = {
   youtubeSlug: string;
 };
 
+export type Track = {
+  name: string;
+  short: string;
+  image: Image;
+  description: string;
+  order: number;
+};
+
 export type SponsorLink = {
   text: string;
   url: string;
