@@ -15,7 +15,7 @@
  */
 
 
-import { Job, Sponsor, Stage, Speaker } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker, Track } from '@lib/types';
 
 const API_URL = 'https://graphql.datocms.com/';
 const API_TOKEN = process.env.DATOCMS_READ_ONLY_API_TOKEN;
@@ -119,13 +119,30 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
           url(imgixParams: {fm: jpg, fit: crop})
         }
         logo {
-          url(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100})
+          url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 100})
         }
       }
     }
   `);
 
   return data.allCompanies;
+}
+export async function getAllTracks(): Promise<Track[]> {
+  const data = await fetchCmsAPI(`
+    {
+      allTracks(first: 10, orderBy: order_ASC) {
+        name
+        short
+        image {
+          url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 100})
+        }
+        description
+        order
+      }
+    }
+  `);
+
+  return data.allTracks;
 }
 
 export async function getAllJobs(): Promise<Job[]> {
