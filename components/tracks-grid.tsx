@@ -41,7 +41,7 @@ export default function TracksGrid({ tracks }: Props) {
             loading="lazy"
             title={track.name}
             width={900}
-            height={100}
+            height={500}
           />
         </div>
         <div className={styles.cardBody}>
