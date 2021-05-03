@@ -74,6 +74,13 @@ export type Track = {
   order: number;
 };
 
+export type Lab = {
+  title: string;
+  description: string;
+  image: Image;
+  show: boolean;
+};
+
 export type SponsorLink = {
   text: string;
   url: string;
