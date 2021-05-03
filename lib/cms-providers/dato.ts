@@ -119,7 +119,7 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
           url(imgixParams: {fm: jpg, fit: crop})
         }
         logo {
-          url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 100})
+          url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 300})
         }
       }
     }
