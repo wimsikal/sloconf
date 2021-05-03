@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker, Track } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker, Track, Lab } from '@lib/types';
 
 // import * as agilityApi from './cms-providers/agility';
 import * as datoCmsApi from './cms-providers/dato';
@@ -26,6 +26,7 @@ let cmsApi: {
   getAllStages: () => Promise<Stage[]>;
   getAllSponsors: () => Promise<Sponsor[]>;
   getAllTracks: () => Promise<Track[]>;
+  getAllLabs: () => Promise<Lab[]>;
   getAllJobs: () => Promise<Job[]>;
 };
 
@@ -49,6 +50,7 @@ if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
     getAllStages: async () => [],
     getAllSponsors: async () => [],
     getAllTracks: async () => [],
+    getAllLabs: async () => [],
     getAllJobs: async () => []
   };
 }
@@ -67,6 +69,10 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
 
 export async function getAllTracks(): Promise<Track[]> {
   return cmsApi.getAllTracks();
+}
+
+export async function getAllLabs(): Promise<Lab[]> {
+  return cmsApi.getAllLabs();
 }
 
 export async function getAllJobs(): Promise<Job[]> {

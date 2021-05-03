@@ -14,15 +14,22 @@
  * limitations under the License.
  */
 
+import { GetStaticProps } from 'next';
 
 import Page from '@components/page';
+import LabsGrid from '@components/labs-grid';
 import Header from '@components/header';
 import Layout from '@components/layout';
-import styles from './labs.module.css';
 
+import { getAllLabs } from '@lib/cms-api';
+import { Lab } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
 
-export default function ExpoPage() {
+type Props = {
+  labs: Lab[];
+};
+
+export default function LabsPage({ labs }: Props) {
   const meta = {
     title: 'Labs - SLOConf',
     description: META_DESCRIPTION
@@ -31,17 +38,20 @@ export default function ExpoPage() {
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Hands-on Labs" description={meta.description} />
-        <div className={styles.text}>
-        <p>Join us in the SLOConf Labs, a hands-on and interactive virtual experience where you can work on your SLO skills. </p>
-        <p>Explore differant labs, each focusing on a topic that relates to Service Level Objects and delivering reliable systems. Topics include Service Level Objectives, Service Level Indicators, Error Budgets, and the tools to support them.</p><p>Details for the labs are coming soon.</p>
-        <h2>Do you want to help?</h2>
-        <p>If you would like to help build or sponsor a lab. Please contact <a href="mailto:danny@nobl9.com">danny@nobl9.com</a></p>
-        <p>SLOConf is looking for volunteers to help staff the "Office Hours" to help support the labs.</p>
-        </div>
+        <Header hero="Labs" description={meta.description} />
+        <LabsGrid labs={labs} />
       </Layout>
     </Page>
   );
 }
 
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const labs = await getAllLabs();
 
+  return {
+    props: {
+      labs
+    },
+    revalidate: 60
+  };
+};
