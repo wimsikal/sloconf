@@ -15,23 +15,27 @@
  */
 
 import cn from 'classnames';
-import { Stage, Talk } from '@lib/types';
+import { Track, Stage, Talk } from '@lib/types';
 import styles from './schedule.module.css';
 import TalkCard from './talk-card';
 
-function StageRow({ stage }: { stage: Stage }) {
+function TrackRow({ track }: { track: Track }) {
   // Group talks by the time block
-  const timeBlocks = stage.schedule.reduce((allBlocks: any, talk) => {
-    allBlocks[talk.start] = [...(allBlocks[talk.start] || []), talk];
-    return allBlocks;
-  }, {});
+  // const timeBlocks = stage.schedule.reduce((allBlocks: any, talk) => {
+  //   allBlocks[talk.start] = [...(allBlocks[talk.start] || []), talk];
+  //   return allBlocks;
+  // }, {});
 
   return (
-    <div key={stage.name} className={styles.row}>
-      <h3 className={cn(styles['stage-name'], styles[stage.slug])}>
-        <span>{stage.name}</span>
+    <div key={track.name} className={styles.row}>
+      <h3 className={cn(styles['stage-name'], styles[track.slug])}>
+        <span>{track.name}</span>
       </h3>
-      <div className={cn(styles.talks, styles[stage.slug])}>
+      
+      <div className={cn(styles.talks, styles[track.slug])}>
+      {/* <TalkCard key={track.title} talk={talk} showTime={index === 0} /> */}
+      </div>
+      {/* <div className={cn(styles.talks, styles[stage.slug])}>
         {Object.keys(timeBlocks).map((startTime: string) => (
           <div key={startTime}>
             {timeBlocks[startTime].map((talk: Talk, index: number) => (
@@ -39,21 +43,21 @@ function StageRow({ stage }: { stage: Stage }) {
             ))}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
 
 type Props = {
-  allStages: Stage[];
+  allTracks: Track[];
 };
 
-export default function Schedule({ allStages }: Props) {
+export default function Schedule({ allTracks }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles['row-wrapper']}>
-        {allStages.map(stage => (
-          <StageRow key={stage.slug} stage={stage} />
+        {allTracks.map(track => (
+          <TrackRow key={track.slug} track={track} />
         ))}
       </div>
     </div>

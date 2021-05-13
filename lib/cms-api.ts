@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker, Track, Lab } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker, Track, Lab, Slocoach } from '@lib/types';
 
 // import * as agilityApi from './cms-providers/agility';
 import * as datoCmsApi from './cms-providers/dato';
@@ -28,6 +28,7 @@ let cmsApi: {
   getAllTracks: () => Promise<Track[]>;
   getAllLabs: () => Promise<Lab[]>;
   getAllJobs: () => Promise<Job[]>;
+  getAllSlocoaches: () => Promise<Slocoach[]>;
 };
 
 if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
@@ -51,7 +52,8 @@ if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
     getAllSponsors: async () => [],
     getAllTracks: async () => [],
     getAllLabs: async () => [],
-    getAllJobs: async () => []
+    getAllJobs: async () => [],
+    getAllSlocoaches: async () => []
   };
 }
 
@@ -77,4 +79,8 @@ export async function getAllLabs(): Promise<Lab[]> {
 
 export async function getAllJobs(): Promise<Job[]> {
   return cmsApi.getAllJobs();
+}
+
+export async function getAllSlocoaches(): Promise<Slocoach[]> {
+  return cmsApi.getAllSlocoaches();
 }

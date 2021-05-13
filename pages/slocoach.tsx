@@ -17,40 +17,40 @@
 import { GetStaticProps } from 'next';
 
 import Page from '@components/page';
-import Schedule from '@components/schedule';
-import Layout from '@components/layout';
+import SloCoachesGrid from '@components/slocoaches-grid';
 import Header from '@components/header';
+import Layout from '@components/layout';
 
-import { getAllTracks } from '@lib/cms-api';
-import { Track } from '@lib/types';
+import { getAllSlocoaches } from '@lib/cms-api';
+import { Slocoach } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
 
 type Props = {
-  allTracks: Track[];
+  slocoaches: Slocoach[];
 };
 
-export default function SchedulePage({ allTracks }: Props) {
+export default function ExpoPage({ slocoaches }: Props) {
   const meta = {
-    title: 'Schedule - SLOConf',
-    description: META_DESCRIPTION
+    title: 'SLOcoach - SLOConf',
+    description: 'The SLOcoach provides consulting services to enable companies to run their cloud at scale.'
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Schedule" description={meta.description} />
-        <Schedule allTracks={allTracks} />
+        <Header hero="SLOcoach" description='The SLOcoach provides consulting services to enable companies to run their cloud at scale.  The move to the cloud is not trivial, a SLOcoach delivers site reliability and SLO expertise coupled with practical business savvy to help businesses architect, deploy, and optimize SLOs. This is done by bringing the entire company; business leaders, software engineers, product, and operations, together with one single focus, customer success.' />
+        <SloCoachesGrid slocoaches={slocoaches} />
       </Layout>
     </Page>
   );
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const allTracks = await getAllTracks();
+  const slocoaches = await getAllSlocoaches();
 
   return {
     props: {
-      allTracks
+      slocoaches
     },
     revalidate: 60
   };
