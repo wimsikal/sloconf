@@ -133,7 +133,7 @@ export async function getAllTracks(): Promise<Track[]> {
       allTracks(first: 10, orderBy: order_ASC) {
         name
         short
-        cardImage {
+        image {
           url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 100})
         }
         description
