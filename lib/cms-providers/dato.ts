@@ -165,7 +165,7 @@ export async function getAllLabs(): Promise<Lab[]> {
 export async function getAllJobs(): Promise<Job[]> {
   const data = await fetchCmsAPI(`
     {
-      allJobs(first: 100, orderBy: companyName_ASC) {
+      allJobs(first: 100, skip: 100, orderBy: companyName_ASC) {
         id
         companyName
         title
