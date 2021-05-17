@@ -46,6 +46,7 @@ export type Talk = {
   end: string;
   speaker: Speaker[];
   youtubeSlug: string;
+  track: Track[];
 };
 
 export type Link = {

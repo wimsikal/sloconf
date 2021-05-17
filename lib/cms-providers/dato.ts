@@ -199,6 +199,9 @@ export async function getAllTalks(): Promise<Talk[]> {
           name
         }
         youtubeSlug
+        track {
+          name
+        }
       }
     }
   `);
