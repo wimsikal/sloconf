@@ -30,6 +30,7 @@ export default function TracksGrid({ tracks }: Props) {
     <div className={styles.grid}>
       {tracks.map(track => (
         <>
+        <Link key={track.name} href={`/tracks/${track.slug}`}>
         {/* <h2>{track.name}</h2> */}
         <div>
         <div className={styles.imageWrapper}>
@@ -52,6 +53,7 @@ export default function TracksGrid({ tracks }: Props) {
           </div>
         </div>
         </div>
+        </Link>
         </>
       ))}
     </div>

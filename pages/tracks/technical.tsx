@@ -32,13 +32,13 @@ import { ta } from 'date-fns/locale';
  
  export default function Talks({ talks }: Props) {
    const meta = {
-     title: 'Talks - SLOConf',
+     title: 'Technical and Deep Dive Talks - SLOConf',
      description: META_DESCRIPTION
    };
    return (
      <Page meta={meta}>
        <Layout>
-         <Header hero="Talks" description={meta.description} />
+         <Header hero="Technical and Deep Dive Talks Talks" description={meta.description} />
          <TalksGrid talks={talks} />
        </Layout>
      </Page>
