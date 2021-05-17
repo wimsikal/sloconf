@@ -29,25 +29,20 @@ export default function TalksGrid({ talks }: Props) {
       {talks.map(talk => (
         <Link key={talk.title} href={`https://youtu.be/${talk.youtubeSlug}`}>
           <a role="button" tabIndex={0} className={styles.card}>
-            <div className={styles.imageWrapper}>
-              {/* <Image
-                alt={speaker.name}
-                src={speaker.image.url}
-                className={styles.image}
-                loading="lazy"
-                quality="50"
-                title={speaker.name}
-                width={300}
-                height={300}
-              /> */}
-            </div>
+            <div className={styles.imageWrapper}></div>
             <div className={styles.cardBody}>
               <div>
                 <h2 className={styles.name}>{talk.title}</h2>
-                <p className={styles.title}>
-                  {`${talk.description} `}
-                  
-                </p>
+
+
+
+                {talk.speaker.map(t => (
+                  <span key={t.name}>{t.name} </span>
+                ))}
+                <br />
+                <br />
+
+                {`${talk.description} `}
               </div>
             </div>
           </a>
