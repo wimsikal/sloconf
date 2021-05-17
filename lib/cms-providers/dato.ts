@@ -202,6 +202,7 @@ export async function getAllTalks(): Promise<Talk[]> {
         track {
           name
         }
+        tracknum
       }
     }
   `);
