@@ -45,8 +45,8 @@ export const NAVIGATION = [
   //   route: '/'
   // },
   {
-    name: 'About',
-    route: '/about'
+    name: 'Talks',
+    route: '/talks'
   },
   {
     name: 'Tracks',
@@ -63,6 +63,10 @@ export const NAVIGATION = [
   {
     name: 'Sponsors',
     route: '/sponsors'
+  },
+  {
+    name: 'SLOcoach',
+    route: '/slocoach'
   },
   {
     name: 'Jobs',
