@@ -84,7 +84,7 @@ export default function StageContainer({ stage, allStages }: Props) {
           <ConfEntry onRegister={() => mutate()} />
         )}
       </div>
-      <ScheduleSidebar allStages={updatedStages} />
+      {/* <ScheduleSidebar allStages={updatedStages} /> */}
     </div>
   );
 }

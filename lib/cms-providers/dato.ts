@@ -57,6 +57,7 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
         talk {
           title
           description
+          youtubeSlug
         }
         image {
           url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 400})
