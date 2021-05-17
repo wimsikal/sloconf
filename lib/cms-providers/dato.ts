@@ -15,7 +15,7 @@
  */
 
 
-import { Job, Sponsor, Stage, Speaker, Track, Lab } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker, Track, Lab, Slocoach } from '@lib/types';
 
 const API_URL = 'https://graphql.datocms.com/';
 const API_TOKEN = process.env.DATOCMS_READ_ONLY_API_TOKEN;
@@ -138,7 +138,15 @@ export async function getAllTracks(): Promise<Track[]> {
           url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 100})
         }
         description
+        talk {
+          title
+          speaker {
+            name
+          }
+
+        }
         order
+        slug
       }
     }
   `);
@@ -180,3 +188,23 @@ export async function getAllJobs(): Promise<Job[]> {
 
   return data.allJobs;
 }
+
+export async function getAllSlocoaches(): Promise<Slocoach[]> {
+  const data = await fetchCmsAPI(`
+    {
+      allSlocoaches(first: 100, orderBy: order_ASC) {
+        name
+        description
+        website
+        cardImage {
+          url(imgixParams: {fm: jpg, fit: crop, w: 900, h: 500})
+        }
+        order
+      }
+    }
+  `);
+
+  return data.allSlocoaches;
+}
+
+  

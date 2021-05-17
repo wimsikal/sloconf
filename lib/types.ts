@@ -65,7 +65,15 @@ export type Sponsor = {
   cardImage: Image;
   logo: Image;
   youtubeSlug: string;
-};
+}
+
+export type Slocoach = {
+  name: string;
+  description: string;
+  website: string;
+  cardImage: Image;
+  order: number;
+}
 
 export type Track = {
   name: string;
@@ -73,6 +81,7 @@ export type Track = {
   image: Image;
   description: string;
   order: number;
+  slug: string;
 };
 
 export type Lab = {
