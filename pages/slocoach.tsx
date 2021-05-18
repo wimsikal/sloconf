@@ -17,9 +17,11 @@
 import { GetStaticProps } from 'next';
 
 import Page from '@components/page';
+import cn from 'classnames';
 import SloCoachesGrid from '@components/slocoaches-grid';
 import Header from '@components/header';
 import Layout from '@components/layout';
+import styles from './slocoach.module.css';
 
 import { getAllSlocoaches } from '@lib/cms-api';
 import { Slocoach } from '@lib/types';
@@ -32,13 +34,41 @@ type Props = {
 export default function ExpoPage({ slocoaches }: Props) {
   const meta = {
     title: 'SLOcoach - SLOConf',
-    description: 'The SLOcoach provides consulting services to enable companies to run their cloud at scale.'
+    description:
+      'The SLOcoach provides consulting services to enable companies to run their cloud at scale.'
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="SLOcoach" description='The SLOcoach provides consulting services to enable companies to run their cloud at scale.  The move to the cloud is not trivial, a SLOcoach delivers site reliability and SLO expertise coupled with practical business savvy to help businesses architect, deploy, and optimize SLOs. This is done by bringing the entire company; business leaders, software engineers, product, and operations, together with one single focus, customer success.' />
+        <Header
+          hero="SLOcoach"
+          description="The SLOcoach provides consulting services to enable companies to run their cloud at scale.  The move to the cloud is not trivial, a SLOcoach delivers site reliability and SLO expertise coupled with practical business savvy to help businesses architect, deploy, and optimize SLOs. This is done by bringing the entire company; business leaders, software engineers, product, and operations, together with one single focus, customer success."
+        />
+            <div className={styles.container}>
+        <a
+          href='/slocoach/contact'
+          // target="_blank"
+          rel="noopener noreferrer"
+          className={cn(styles.button, styles['button-resource'])}
+        >
+          <span className={styles.truncate}>Tell me more about SLOcoach</span>
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+            shapeRendering="geometricPrecision"
+          >
+          
+          </svg>
+        </a>
+        </div>
+
         <SloCoachesGrid slocoaches={slocoaches} />
       </Layout>
     </Page>

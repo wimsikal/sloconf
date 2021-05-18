@@ -1,0 +1,7 @@
+.text {
+    width: 100%;
+    min-width: 20em;
+    max-width: 40em;
+    margin: 1em auto;
+    padding: 1em;
+  }
