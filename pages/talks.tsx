@@ -17,9 +17,11 @@
  import { GetStaticProps } from 'next';
 
  import Page from '@components/page';
+ import cn from 'classnames';
  import TalksGrid from '@components/talks-grid';
  import Layout from '@components/layout';
  import Header from '@components/header';
+ import styles from './talks.module.css';
  
  import { getAllTalks } from '@lib/cms-api';
  import { Talk } from '@lib/types';
@@ -39,6 +41,31 @@ import { ta } from 'date-fns/locale';
      <Page meta={meta}>
        <Layout>
          <Header hero="Talks" description={meta.description} />
+
+         <div className={styles.container}>
+        <a
+          href='https://join.slack.com/t/sloconf/shared_invite/zt-pjpo902s-TaGPFm1CYNVH58bcI6b0Yg'
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(styles.button, styles['button-resource'])}
+        >
+          <span className={styles.truncate}>Join the conference on Slack</span>
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+            shapeRendering="geometricPrecision"
+          >
+          
+          </svg>
+        </a>
+        </div>
+
          <TalksGrid talks={talks} />
        </Layout>
      </Page>
