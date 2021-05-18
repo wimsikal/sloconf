@@ -143,7 +143,6 @@ export async function getAllTracks(): Promise<Track[]> {
           speaker {
             name
           }
-
         }
         order
         slug
@@ -197,6 +196,10 @@ export async function getAllTalks(): Promise<Talk[]> {
         description
         speaker {
           name
+          slug
+            image {
+              url(imgixParams: {fm: jpg, fit: crop, w: 120, h: 120})
+            }
         }
         youtubeSlug
         track {

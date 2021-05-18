@@ -108,8 +108,24 @@
 }
 
 .speaker {
-  margin-top: var(--space);
+  margin-top: var(--space-6x);
   color: #f1f1f1;
   margin-bottom: 1.4;
   line-height: 1.4;
+}
+
+
+.avatar {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.avatar-wrapper {
+  margin-right: var(--space-3x);
+}
+
+.avatar-group {
+  display: flex;
 }
