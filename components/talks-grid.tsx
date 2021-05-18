@@ -33,19 +33,17 @@ export default function TalksGrid({ talks }: Props) {
             <div className={styles.cardBody}>
               <div>
                 <h2 className={styles.name}>{talk.title}</h2>
+                
 
                 {talk.track.map(t => (
-                  <p className={styles.track} key={t.name}>
-                    {t.name}
-                  </p>
+                  <p className={styles.track} key={t.name}>{t.name}</p>
                 ))}
 
+<p>
                 {talk.speaker.map(t => (
-                  <p className={styles.speaker} key={t.name}>
-                    {t.name}{' '}
-                  </p>
+                  <span className={styles.speaker} key={t.name}>{t.name} </span>
                 ))}
-
+</p>
                 {`${talk.description} `}
               </div>
             </div>
