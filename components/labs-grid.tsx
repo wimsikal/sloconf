@@ -20,7 +20,6 @@ import cn from 'classnames';
 import { Lab } from '@lib/types';
 import styles from './labs-grid.module.css';
 
-
 type Props = {
   labs: Lab[];
 };
@@ -31,29 +30,31 @@ export default function TracksGrid({ labs }: Props) {
     <div className={styles.grid}>
       {active.map(lab => (
         <>
-        {/* <h2>{track.name}</h2> */}
-        <div>
-        <div className={styles.imageWrapper}>
-          <Image
-            alt={lab.title}
-            src={lab.image.url}
-            className={styles.image}
-            quality="50"
-            loading="lazy"
-            title={lab.title}
-            width={900}
-            height={500}
-          />
-        </div>
-        <div className={styles.cardBody}>
-          <div>
-            <h2 className={styles.name}>{lab.title}</h2>
-            <p className={styles.description}>{ lab.description }</p>
-          </div>
-        </div>
-        </div>
+          {/* <h2>{track.name}</h2> */}
+          <Link key={lab.title} href={lab.url}>
+            <div>
+              <div className={styles.imageWrapper}>
+                <Image
+                  alt={lab.title}
+                  src={lab.image.url}
+                  className={styles.image}
+                  quality="50"
+                  loading="lazy"
+                  title={lab.title}
+                  width={900}
+                  height={500}
+                />
+              </div>
+              <div className={styles.cardBody}>
+                <div>
+                  <h2 className={styles.name}>{lab.title}</h2>
+                  <p className={styles.description}>{lab.description}</p>
+                </div>
+              </div>
+            </div>
+          </Link>
         </>
       ))}
     </div>
-  )
+  );
 }

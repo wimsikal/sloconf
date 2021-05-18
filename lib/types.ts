@@ -91,6 +91,7 @@ export type Lab = {
   description: string;
   image: Image;
   show: boolean;
+  url: string;
 };
 
 export type SponsorLink = {

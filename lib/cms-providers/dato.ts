@@ -162,6 +162,7 @@ export async function getAllLabs(): Promise<Lab[]> {
         image {
           url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 100})
         }
+        url
         show
       }
     }
