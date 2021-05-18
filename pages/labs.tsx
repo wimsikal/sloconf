@@ -38,7 +38,7 @@ export default function LabsPage({ labs }: Props) {
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Labs" description={meta.description} />
+        <Header hero="Labs and Demos" description={meta.description} />
         <LabsGrid labs={labs} />
       </Layout>
     </Page>
