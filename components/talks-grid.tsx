@@ -46,22 +46,26 @@ export default function TalksGrid({ talks }: Props) {
                       <div className={styles['avatar-group']}>
                         <div key={t.name} className={styles['avatar-wrapper']}>
                           <Link href={`/speakers/${t.slug}`}>
-                          <Image
-                            loading="lazy"
-                            alt={t.name}
-                            className={styles.avatar}
-                            src={t.image.url}
-                            title={t.name}
-                            width={72}
-                            height={72}
-                          />
+                            <Image
+                              loading="lazy"
+                              alt={t.name}
+                              className={styles.avatar}
+                              src={t.image.url}
+                              title={t.name}
+                              width={72}
+                              height={72}
+                            />
                           </Link>
                         </div>
                         <Link href={`/speakers/${t.slug}`}>
-                          <span className={styles.speaker} key={t.name}>
+                          {/* <span className={styles.speaker} key={t.name}>
                             {t.name}{' '}
-                          </span>
-                          </Link>
+                          </span> */}
+                          <div>
+                            <p className={styles.name}>{t.name} </p>
+                              <span className={styles.company}>@{t.company}</span>
+                          </div>
+                        </Link>
                       </div>
                     </div>
                   ))}

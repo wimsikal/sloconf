@@ -196,6 +196,8 @@ export async function getAllTalks(): Promise<Talk[]> {
         description
         speaker {
           name
+          title
+          company
           slug
             image {
               url(imgixParams: {fm: jpg, fit: crop, w: 120, h: 120})
