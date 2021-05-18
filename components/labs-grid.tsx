@@ -32,6 +32,7 @@ export default function TracksGrid({ labs }: Props) {
         <>
           {/* <h2>{track.name}</h2> */}
           <Link key={lab.title} href={lab.url}>
+          <a role="button" tabIndex={0} className={styles.card}>
             <div>
               <div className={styles.imageWrapper}>
                 <Image
@@ -41,8 +42,8 @@ export default function TracksGrid({ labs }: Props) {
                   quality="50"
                   loading="lazy"
                   title={lab.title}
-                  width={900}
-                  height={500}
+                  width={768}
+                  height={300}
                 />
               </div>
               <div className={styles.cardBody}>
@@ -52,6 +53,7 @@ export default function TracksGrid({ labs }: Props) {
                 </div>
               </div>
             </div>
+            </a>
           </Link>
         </>
       ))}

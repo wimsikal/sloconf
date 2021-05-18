@@ -160,7 +160,7 @@ export async function getAllLabs(): Promise<Lab[]> {
         title
         description
         image {
-          url(imgixParams: {fm: jpg, fit: crop, w: 900, h: 500})
+          url(imgixParams: {fm: jpg, fit: crop, w: 900, h: 00})
         }
         url
         show
