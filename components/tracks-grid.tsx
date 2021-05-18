@@ -31,9 +31,11 @@ export default function TracksGrid({ tracks }: Props) {
       {tracks.map(track => (
         <>
         <Link key={track.name} href={`/tracks/${track.slug}`}>
+        <a role="button" tabIndex={0} className={styles.card}>
         {/* <h2>{track.name}</h2> */}
         <div>
         <div className={styles.imageWrapper}>
+        
           <Image
             alt={track.name}
             src={track.image.url}
@@ -53,6 +55,7 @@ export default function TracksGrid({ tracks }: Props) {
           </div>
         </div>
         </div>
+        </a>
         </Link>
         </>
       ))}
