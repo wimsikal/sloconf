@@ -99,3 +99,17 @@
 .title {
   margin: 0;
 }
+
+.track {
+  margin-top: var(--space);
+  color: #835EF6;
+  margin-bottom: 1.4;
+  line-height: 1.4;
+}
+
+.speaker {
+  margin-top: var(--space);
+  color: #f1f1f1;
+  margin-bottom: 1.4;
+  line-height: 1.4;
+}
