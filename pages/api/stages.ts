@@ -16,14 +16,14 @@
 
 import ms from 'ms';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getAllStages } from '@lib/cms-api';
+import { getAllTalks } from '@lib/cms-api';
 
 // Number of seconds to cache the API response for
 const EXPIRES_SECONDS = 5;
 
-export default async function getStages(_: NextApiRequest, res: NextApiResponse) {
+export default async function getTalks(_: NextApiRequest, res: NextApiResponse) {
   try {
-    const allStages = await getAllStages();
+    const allStages = await getAllTalks();
 
     // Set caching headers
     const expires = new Date(Date.now() + ms(`${EXPIRES_SECONDS}s`));

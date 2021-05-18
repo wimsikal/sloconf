@@ -165,6 +165,20 @@
     }
   }
   
+  .button-announce {
+    background: #845ef7;
+    color: #fff;
+    border: 1px solid var(--accents-7);
+    max-width: 100%;
+    margin-bottom: var(--space-4x);
+  }
+  
+  @media (min-width: 500px) {
+    .button-announce {
+      max-width: 350px;
+    }
+  }
+  
   .truncate {
     white-space: nowrap;
     overflow: hidden;

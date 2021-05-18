@@ -27,7 +27,7 @@ export default function TalksGrid({ talks }: Props) {
   return (
     <div className={styles.grid}>
       {talks.map(talk => (
-        <Link key={talk.title} href={`https://youtu.be/${talk.youtubeSlug}`}>
+        <Link key={talk.title} href={`/talk/${talk.youtubeSlug}`}>
           <a role="button" tabIndex={0} className={styles.card}>
             <div className={styles.imageWrapper}></div>
             <div className={styles.cardBody}>
