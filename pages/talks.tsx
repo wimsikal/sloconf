@@ -44,12 +44,12 @@ import { ta } from 'date-fns/locale';
 
          <div className={styles.container}>
         <a
-          href='https://nobl9.zoom.us/j/92615028128'
+          href='https://www.youtube.com/watch?v=-No6FWkb5po'
           target="_blank"
           rel="noopener noreferrer"
           className={cn(styles.button, styles['button-announce'])}
         >
-          <span className={styles.truncate}>Join the Standup at 9am (PST)</span>
+          <span className={styles.truncate}>Watch: The New Stack SRE Author Panel</span>
           <svg
             viewBox="0 0 24 24"
             width="16"
