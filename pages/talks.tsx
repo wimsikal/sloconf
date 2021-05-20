@@ -49,7 +49,7 @@ import { ta } from 'date-fns/locale';
           rel="noopener noreferrer"
           className={cn(styles.button, styles['button-announce'])}
         >
-          <span className={styles.truncate}>Watch: The New Stack SRE Author Panel</span>
+          <span className={styles.truncate}>The New Stack SRE Author Panel</span>
           <svg
             viewBox="0 0 24 24"
             width="16"
